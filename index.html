@@ -4,7 +4,8 @@
     in Animal Crossing: New Horizons
     Created by: Cassaundra Caldwell & Rey Orozco
     Date created: 3 May 2020
-    Date last modified: 3 May 2020 -->
+    Date last modified: 3 May 2020
+    File name: index.html -->
 
 <head>
   <meta charset="UTF-8">
@@ -14,6 +15,7 @@
   <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="critters.js"></script>
+  <script src="CTScript.js"></script>
 </head>
 
 <body>
@@ -41,10 +43,18 @@
         });
       </script>
       <!-- plus button once critter is selected to add to list -->
-      <img src="images/icon_add.png" id="addBtn" />
+      <input type="image" id="addBtn" alt="Add" src="images/icon_add.png">
     </div>
 
-  </div>
+    <div id="workingList">
+      <!--area for added critters, quantity manipulation, completed checkbox-->
+      <p id="addedList">
+
+      <div id="completedList">
+        <!--area for list of completed collectibles once checked off-->
+      </div>
+
+    </div>
 </body>
 
 </html>
