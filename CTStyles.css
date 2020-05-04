@@ -1,0 +1,13 @@
+body {
+  background-color: #A9D18E;
+  font-family: "Veranda", Geneva, sans-serif;
+  color: #227538;
+}
+
+#main {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+#description {}
