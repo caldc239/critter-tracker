@@ -10,9 +10,10 @@
   <meta charset="UTF-8">
   <title>Critter Tracker</title>
   <link href="CTStyles.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="critters.js"></script>
 </head>
 
 <body>
@@ -36,9 +37,11 @@
 
       <script>
         $("#critterSelection").autocomplete({
-          source: [ /*variable of js array here*/ ]
+          source: bugs_names_only
         });
       </script>
+      <!-- plus button once critter is selected to add to list -->
+      <img src="images/icon_add.png" id="addBtn" />
     </div>
 
   </div>
