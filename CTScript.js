@@ -6,3 +6,13 @@ Created by Cassaundra Caldwell and Rey Orozco
 Date Created: 4 May 2020
 Date Last Modified: 4 May 2020
 File name: CTScripts.js */
+
+window.onload = function() {addButton()};
+
+function addButton() {
+  document.getElementById("addBtn").addEventListener("click", addToList);
+
+  function addToList() {
+
+  };
+};
