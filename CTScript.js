@@ -13,6 +13,11 @@ function addButton() {
   document.getElementById("addBtn").addEventListener("click", addToList);
 
   function addToList() {
+    var list = document.getElementById('addedList');
+    var critter = document.getElementById('critterSelection').value;
+    var entry = document.createElement('li');
+    entry.appendChild(document.createTextNode(critter));
+    list.appendChild(entry);
 
   };
 };
