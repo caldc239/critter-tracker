@@ -91,7 +91,7 @@ for (i = 0; i < bugs_data.length; i++) {
 function critters_lookup_by_name(name) {
 	for (i = 0; i < bugs_data.length; i++) {
 		if (bugs_data[i]["name"] == name) {
-			return bugs_data[i];
+			return bugs_data[i]["id"];
 		}
 	}
 	
