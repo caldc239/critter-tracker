@@ -16,6 +16,11 @@ var userCritters = [];
 
 function addButton() {
   document.getElementById("addBtn").addEventListener("click", addToList);
+  document.getElementById("critterSelection").addEventListener("keyup", function(e) {
+    if (e.keyCode === 13) {
+      addToList();
+    }
+  });
 };
 
 function addToList() {
