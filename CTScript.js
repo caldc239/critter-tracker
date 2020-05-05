@@ -8,7 +8,8 @@ Date Last Modified: 4 May 2020
 File name: CTScripts.js */
 
 window.onload = function() {
-  addButton()
+  addButton();
+  document.getElementById("critterSelection").focus();
 };
 
 /*array to hold IDs of critters obtained from name*/
@@ -34,6 +35,7 @@ function addToList() {
   updateList();
   /*clear text box*/
   document.getElementById('critterSelection').value = '';
+  document.getElementById('critterSelection').focus();
 };
 
 function updateList() {
