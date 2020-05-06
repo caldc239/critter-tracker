@@ -35,21 +35,27 @@ function addToList() {
   updateList();
   /*clear text box*/
   document.getElementById('critterSelection').value = '';
-  document.getElementById('critterSelection').focus();
 };
 
 function updateList() {
   var inProgress = "";
   var i;
   inProgress += "<br><table>";
-  inProgress += "<tr><th>Critter</th><th>Quantity</th><th>Completed</th></tr>";
+  inProgress += "<tr><th>Critter</th><th>Quantity</th><th>Completed</th><th>Delete</th></tr>";
   for (i = 0; i < userCritters.length; ++i) {
     inProgress += "<tr>";
     inProgress += "<td>" + bugs_data[userCritters[i] - 1]["name"] + "</td>";
     inProgress += "<td>test</td>";
     inProgress += "<td><input type=\"checkbox\" id=\"checkbox" + i + "\"< /td>";
+    inProgress += "<td><img src=\"image link here\" onclick=\"deleteData(" + i + ")\"></td>";
     inProgress += "</tr>";
   }
   inProgress += "</table>";
   document.getElementById('workingList').innerHTML = inProgress;
+  document.getElementById('critterSelection').focus();
+};
+
+function deleteData(i) {
+  userCritters.splice(i, 1);
+  updateList();
 };
