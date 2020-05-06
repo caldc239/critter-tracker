@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<!-- A page to track critters & collectibles
+    in Animal Crossing: New Horizons
+    Created by: Cassaundra Caldwell & Rey Orozco
+    Date created: 3 May 2020
+    Date last modified: 3 May 2020
+    File name: index.html -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Critter Tracker</title>
+  <link href="CTStyles.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="critters.js"></script>
+  <script src="CTScript.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <center><img src="CritterTrackerLogo.png" height=200px /></center>
+    <!-- hex color #A9D18E for background -->
+
+    <div id="description">
+      <p><b>
+          <center>Critter Tracker is a place to log the critters that you
+            would like collectibles of! Enter the name of the
+            critter you would like to make a collectible, add how many you have,
+            and mark it as completed once you receive the item.</center>
+        </b></p>
+      <br><br>
+    </div>
+    <!-- Area for script to autocomplete critter entry -->
+    <div id="data-entry">
+      <label for="critterSelection">Enter the critter you would like to collect: </label>
+      <input id="critterSelection">
+
+      <script>
+        $("#critterSelection").autocomplete({
+          source: bugs_names_only
+        });
+      </script>
+      <!-- plus button once critter is selected to add to list -->
+      <input type="image" id="addBtn" alt="Add" src="images/icon_add.png">
+    </div>
+
+    <div id="workingList">
+      <!--area for added critters, quantity manipulation, completed checkbox-->
+      <ul id="addedList"></ul>
+
+    </div>
+
+    <div id="completedList">
+      <!--area for list of completed collectibles once checked off-->
+    </div>
+
+  </div>
+</body>
+
+</html>

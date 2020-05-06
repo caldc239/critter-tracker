@@ -1,0 +1,23 @@
+/*Stylesheet to support Critter Tracker page
+Created by Cassaundra Caldwell & Rey Orozco
+Date Created: 3 May 2020
+Date Last Modified: 4 May 2020
+File name: CTStyles.css*/
+body {
+  background-color: #A9D18E;
+  font-family: "Veranda", Geneva, sans-serif;
+  color: #227538;
+}
+
+#main {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+#description {}
+
+/*Add critter to list with this button*/
+#addBtn {
+  height: 24px;
+}
