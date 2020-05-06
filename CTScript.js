@@ -48,7 +48,8 @@ function addToList() {
 function updateList() {
   var inProgress = "";
   var i;
-  inProgress += "<br><table>";
+  inProgress += "<h2><center>Working List</center></h2>";
+  inProgress += "<table>";
   inProgress += "<tr><th>Critter</th><th>Quantity</th><th>Completed</th><th>Delete</th></tr>";
   for (i = 0; i < userCritters.length; ++i) {
     inProgress += "<tr>";
@@ -63,7 +64,8 @@ function updateList() {
 
   var completed = "";
   var k;
-  completed += "<br><table>";
+  completed +="<h2><center>Completed List</center></h2>";
+  completed += "<table>";
   completed += "<tr><th>Critter</th><th>Delete</th></tr>";
   for (k=0; k < completedCritters.length; ++k) {
     completed += "<tr>";
