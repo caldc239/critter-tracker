@@ -2,13 +2,17 @@
 <head>
 	<title>Rey's Test Page</title>
 	
+	<style>
+	  * { font: 12pt verdana; }
+	</style>
+	
 	<script src="critters.js"></script>
 	
 </head>
 <body>
 
 	<b>Rey's Test Page</b><br>
-	Check the console! (Ctrl+Shift+I)
+	Check the console! (Ctrl+Shift+I)<br><hr>
 	
 	<script>
 	  console.log(critters_lookup_by_name("Emperor Butterfly"));
@@ -18,6 +22,12 @@
 	  console.log(critters_lookup_by_name("Emperor Flutterby"));
 	  
 	  console.log(critters_lookup_by_name("Drone Beatle"));
+	  
+	  
+	  for (i = 0; i < bugs_data.length; i++) {
+		document.write("<img src=\"" + critters_image(i+1) + "\" height=32> <b>" + bugs_data[i]["name"] + "</b><br>");
+	  }
+	  
 	</script>
 
 </body>

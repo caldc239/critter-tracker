@@ -1,3 +1,4 @@
+
 var bugs_data = [	
 	{ id: 1, name: "Common Butterfly", type: "Flying", value: 160, time: "4 a.m. - 7 p.m.", season: "September-June (Northern) / March-December (Southern)" },
 	{ id: 2, name: "Yellow Butterfly", type: "Flying", value: 160, time: "4 a.m. - 7 p.m.", season: "March-June, September-October (Northern) / March-April, September-December (Southern)" },
@@ -6,10 +7,10 @@ var bugs_data = [
 	{ id: 5, name: "Common Bluebottle", type: "Flying", value: 300, time: "4 a.m. - 7 p.m.", season: "April-August (Northern) / October-February (Southern)" },
 	{ id: 6, name: "Paper Kite Butterfly", type: "Flying", value: 1000, time: "8 a.m. - 7 p.m.", season: "Year-round (Northern and Southern)" },
 	{ id: 7, name: "Great Purple Emperor", type: "Flying", value: 3000, time: "4 a.m. - 7 p.m.", season: "May-August (Northern) / November-February (Southern)" },
-	{ id: 8, name: "Monach Butterfly", type: "Flying", value: 140, time: "4 a.m. - 5 p.m.", season: "September-November (Northern) / March-May (Southern)" },
+	{ id: 8, name: "Monarch Butterfly", type: "Flying", value: 140, time: "4 a.m. - 5 p.m.", season: "September-November (Northern) / March-May (Southern)" },
 	{ id: 9, name: "Emperor Butterfly", type: "Flying", value: 4000, time: "5 p.m. - 8 a.m.", season: "June-September, December-March (Northern) / December-March, June-September (Southern)" },
 	{ id: 10, name: "Agrias Butterfly", type: "Flying", value: 3000, time: "8 a.m. - 5 p.m.", season: "April-September (Northern) / November-March (Southern)" },
-	{ id: 11, name: "Raja Brooke's Birdwing", type: "Flying by purple flowers", value: 2500, time: "8 a.m. - 5 p.m.", season: "April-September, December-February (Northern) / November-March, June-August (Southern)" },
+	{ id: 11, name: "Rajah Brooke's Birdwing", type: "Flying by purple flowers", value: 2500, time: "8 a.m. - 5 p.m.", season: "April-September, December-February (Northern) / November-March, June-August (Southern)" },
 	{ id: 12, name: "Queen Alexandra's Birdwing", type: "Flying", value: 4000, time: "8 a.m. - 4 p.m.", season: "May-September (Northern) / November-March (Southern)" },
 	{ id: 13, name: "Moth", type: "Flying by light", value: 130, time: "7 p.m. - 4 a.m.", season: "Year-round (Northern and Southern)" },
 	{ id: 14, name: "Atlas Moth", type: "On trees", value: 3000, time: "7 p.m. - 4 a.m.", season: "April-September (Northern) / October-March (Southern)" },
@@ -63,7 +64,7 @@ var bugs_data = [
 	{ id: 62, name: "Horned Dynastid", type: "On trees", value: 1350, time: "5 p.m. - 8 a.m.", season: "July-August (Northern) / January-February (Southern)" },
 	{ id: 63, name: "Horned Atlas", type: "On coconut trees", value: 8000, time: "5 p.m. - 8 a.m.", season: "July-August (Northern) / January-February (Southern)" },
 	{ id: 64, name: "Horned Elephant", type: "On coconut trees", value: 8000, time: "5 p.m. - 8 a.m.", season: "July-August (Northern) / January-February (Southern)" },
-	{ id: 65, name: "Horned Herucles", type: "On coconut trees", value: 12000, time: "5 p.m. - 8 a.m.", season: "July-August (Northern) / January-February (Southern)" },
+	{ id: 65, name: "Horned Hercules", type: "On coconut trees", value: 12000, time: "5 p.m. - 8 a.m.", season: "July-August (Northern) / January-February (Southern)" },
 	{ id: 66, name: "Walking Stick", type: "On trees", value: 600, time: "4 a.m. - 8 a.m., 5 p.m. - 7 p.m.", season: "July-November (Northern) / January-May (Southern)" },
 	{ id: 67, name: "Walking Leaf", type: "Near trees, disguised as furniture leaf", value: 600, time: "All day", season: "July-August (Northern) / January-March (Southern)" },
 	{ id: 68, name: "Bagworm", type: "Falls from shaking trees", value: 600, time: "All day", season: "Year-round (Northern and Southern)" },
@@ -97,4 +98,12 @@ function critters_lookup_by_name(name) {
 	
 	console.log("critters_lookup_by_name - name (" + name + ") not found!");
 	return 0;
+}
+
+function critters_image(i) {
+	var s = bugs_data[i-1]["name"];
+	s = s.toLowerCase();
+	s = s.replace(/ /g, "_");
+	s = s.replace(/'/g, "");
+	return "images/bugs/" + s + ".png";
 }
