@@ -13,7 +13,8 @@ A place to document changes to the project
 - This CHANGELOG file to document changes in versions
 - Array to hold quantities of critters
 - Support for buttons and functions to manipulate quantities
-- Finished "moveToCompleted" function 
+- Finished "moveToCompleted" function
+- Added icons to manipulate quantities
 
 ## [0.0.2] 2020-05-05
 ### Added

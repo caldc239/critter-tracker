@@ -53,7 +53,7 @@ function updateList() {
   for (i = 0; i < userCritters.length; ++i) {
     inProgress += "<tr>";
     inProgress += "<td>" + bugs_data[userCritters[i] - 1]["name"] + "</td>";
-    inProgress += "<td><img src=\"images/icons/blank.png\" class=\"imgBtn\" onClick=\"decreaseQuant(" + i + ")\">" + critterQuant[i] + "<img src=\"images/icons/blank.png\" class=\"imgBtn\" onClick=\"increaseQuant(" + i + ")\"></td>";
+    inProgress += "<td><img src=\"images/icons/icon_arrow_down.png\" class=\"imgBtn\" onClick=\"decreaseQuant(" + i + ")\">" + critterQuant[i] + "<img src=\"images/icons/icon_arrow_up.png\" class=\"imgBtn\" onClick=\"increaseQuant(" + i + ")\"></td>";
     inProgress += "<td><img src=\"images/icons/icon_check.png\" class=\"imgBtn\" onclick=\"moveToCompleted(" + i + ")\"< /td>";
     inProgress += "<td><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + i + ")\" class=\"imgBtn\"></td>";
     inProgress += "</tr>";
