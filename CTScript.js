@@ -51,7 +51,7 @@ function updateList() {
     inProgress += "<tr>";
     inProgress += "<td>" + bugs_data[userCritters[i] - 1]["name"] + "</td>";
     inProgress += "<td>test</td>";
-    inProgress += "<td><input type=\"checkbox\" id=\"checkbox" + i + "\"< /td>";
+    inProgress += "<td><img src=\"images/icons/icon_check.png\" class=\"imgBtn\" onclick=\"moveToCompleted(" + i + ")\"< /td>";
     inProgress += "<td><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + i + ")\" class=\"imgBtn\"></td>";
     inProgress += "</tr>";
   }
@@ -63,4 +63,8 @@ function updateList() {
 function deleteData(i) {
   userCritters.splice(i, 1);
   updateList();
+};
+
+function moveToCompleted(i) {
+  alert("it worked!");
 };
