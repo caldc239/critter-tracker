@@ -15,9 +15,7 @@ body {
   margin: auto;
 }
 
-#description {}
-
 /*Add critter to list with this button*/
-#addBtn {
+.imgBtn {
   height: 24px;
 }

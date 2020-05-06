@@ -47,7 +47,7 @@ function updateList() {
     inProgress += "<td>" + bugs_data[userCritters[i] - 1]["name"] + "</td>";
     inProgress += "<td>test</td>";
     inProgress += "<td><input type=\"checkbox\" id=\"checkbox" + i + "\"< /td>";
-    inProgress += "<td><img src=\"image link here\" onclick=\"deleteData(" + i + ")\"></td>";
+    inProgress += "<td><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + i + ")\" class=\"imgBtn\"></td>";
     inProgress += "</tr>";
   }
   inProgress += "</table>";
