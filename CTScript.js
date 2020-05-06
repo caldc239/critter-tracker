@@ -41,7 +41,7 @@ function addToList() {
 function updateList() {
   var inProgress = "";
   var i;
-  inProgress += "<table>";
+  inProgress += "<br><table>";
   inProgress += "<tr><th>Critter</th><th>Quantity</th><th>Completed</th></tr>";
   for (i = 0; i < userCritters.length; ++i) {
     inProgress += "<tr>";
