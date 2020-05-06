@@ -39,17 +39,9 @@ function addToList() {
 };
 
 function updateList() {
-  var inProgress = "";
+  document.getElementById('addedList').innerHTML = "";
   var i;
-  inProgress += "<table>";
-  inProgress += "<tr><th>Critter</th><th>Quantity</th><th>Completed</th></tr>";
   for (i = 0; i < userCritters.length; ++i) {
-    inProgress += "<tr>";
-    inProgress += "<td>" + bugs_data[userCritters[i] - 1]["name"] + "</td>";
-    inProgress += "<td>test</td>";
-    inProgress += "<td><input type=\"checkbox\" id=\"checkbox" + i + "\"< /td>";
-    inProgress += "</tr>";
+    document.getElementById('addedList').innerHTML += "<li>" + bugs_data[userCritters[i] - 1]["name"] + "</li>";
   }
-  inProgress += "</table>";
-  document.getElementById('workingList').innerHTML = inProgress;
 };

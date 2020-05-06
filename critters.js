@@ -79,7 +79,7 @@ var bugs_data = [
 	{ id: 78, name: "Spider", type: "Falls from shaking trees", value: 480, time: "7 p.m. - 8 a.m.", season: "Year-round (Northern and Southern)" },
 	{ id: 79, name: "Tarantula", type: "On ground", value: 8000, time: "7 p.m. - 4 a.m.", season: "November-April (Northern) / May-October (Southern)" },
 	{ id: 80, name: "Scorpion", type: "On ground", value: 8000, time: "7 p.m. - 4 a.m.", season: "May-October (Northern) / November-April (Southern)" },
-];
+];	
 
 
 
@@ -94,7 +94,7 @@ function critters_lookup_by_name(name) {
 			return bugs_data[i]["id"];
 		}
 	}
-
+	
 	console.log("critters_lookup_by_name - name (" + name + ") not found!");
 	return 0;
 }
