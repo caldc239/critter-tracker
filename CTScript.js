@@ -14,6 +14,7 @@ window.onload = function() {
 
 /*array to hold IDs of critters obtained from name*/
 var userCritters = [];
+var critterQuant = [];
 
 function addButton() {
   document.getElementById("addBtn").addEventListener("click", addToList);
@@ -34,6 +35,7 @@ function addToList() {
   var critterId = critters_lookup_by_name(critter);
   if(userCritters.indexOf(critterId) == -1){
     userCritters.push(critterId);
+    critterQuant.push(0);
   } else {
     alert("That critter is already on the list!")
   }
@@ -50,7 +52,7 @@ function updateList() {
   for (i = 0; i < userCritters.length; ++i) {
     inProgress += "<tr>";
     inProgress += "<td>" + bugs_data[userCritters[i] - 1]["name"] + "</td>";
-    inProgress += "<td>test</td>";
+    inProgress += "<td><img src=\"images/icons/blank.png\" class=\"imgBtn\" onClick=\"decreaseQuant(" + i + ")\">" + critterQuant[i] + "<img src=\"images/icons/blank.png\" class=\"imgBtn\" onClick=\"increaseQuant(" + i + ")\"></td>";
     inProgress += "<td><img src=\"images/icons/icon_check.png\" class=\"imgBtn\" onclick=\"moveToCompleted(" + i + ")\"< /td>";
     inProgress += "<td><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + i + ")\" class=\"imgBtn\"></td>";
     inProgress += "</tr>";
@@ -62,9 +64,20 @@ function updateList() {
 
 function deleteData(i) {
   userCritters.splice(i, 1);
+  critterQuant.splice(i,1);
   updateList();
 };
 
 function moveToCompleted(i) {
   alert("it worked!");
+};
+
+function decreaseQuant(i) {
+  critterQuant[i]-=1;
+  updateList();
+};
+
+function increaseQuant(i) {
+  critterQuant[i]+=1;
+  updateList();
 };
