@@ -11,7 +11,9 @@ A place to document changes to the project
 ## [0.0.3] - 2020-05-6
 ### Added
 - This CHANGELOG file to document changes in versions
-- Default quantity (0) upon entering critter
+- Array to hold quantities of critters
+- Support for buttons and functions to manipulate quantities
+- Finished "moveToCompleted" function 
 
 ## [0.0.2] 2020-05-05
 ### Added

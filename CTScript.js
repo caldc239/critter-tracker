@@ -15,6 +15,7 @@ window.onload = function() {
 /*array to hold IDs of critters obtained from name*/
 var userCritters = [];
 var critterQuant = [];
+var completedCritters = [];
 
 function addButton() {
   document.getElementById("addBtn").addEventListener("click", addToList);
@@ -59,6 +60,20 @@ function updateList() {
   }
   inProgress += "</table>";
   document.getElementById('workingList').innerHTML = inProgress;
+
+  var completed = "";
+  var k;
+  completed += "<br><table>";
+  completed += "<tr><th>Critter</th><th>Delete</th></tr>";
+  for (k=0; k < completedCritters.length; ++k) {
+    completed += "<tr>";
+    completed += "<td>" + bugs_data[completedCritters[k] - 1]["name"] + "</td>";
+    completed += "<td><img src=\"images/icons/icon_delete.png\" onclick=\"deleteCompletedData(" + k + ")\" class=\"imgBtn\"></td>";
+    completed += "</tr>";
+  }
+  completed += "</table>";
+  document.getElementById('completedList').innerHTML = completed;
+
   document.getElementById('critterSelection').focus();
 };
 
@@ -68,8 +83,15 @@ function deleteData(i) {
   updateList();
 };
 
+function deleteCompletedData(k)
+{
+  completedCritters.splice(k, 1);
+  updateList();
+};
+
 function moveToCompleted(i) {
-  alert("it worked!");
+  completedCritters.push(userCritters[i]);
+  deleteData(i);
 };
 
 function decreaseQuant(i) {
