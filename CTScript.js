@@ -31,7 +31,12 @@ function addToList() {
   entry.appendChild(document.createTextNode(critter));
   list.appendChild(entry);*/
   var critter = document.getElementById('critterSelection').value;
-  userCritters.push(critters_lookup_by_name(critter));
+  var critterId = critters_lookup_by_name(critter);
+  if(userCritters.indexOf(critterId) == -1){
+    userCritters.push(critterId);
+  } else {
+    alert("That critter is already on the list!")
+  }
   updateList();
   /*clear text box*/
   document.getElementById('critterSelection').value = '';
