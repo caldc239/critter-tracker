@@ -15,9 +15,12 @@ window.onload = function() {
     }
   });
   document.getElementById("critterSelection").focus();
+
+  retrieveBugData();
+  updateList();
 };
 
-
+//Array to store each entry (name, quantity, completed)
 let listData = [];
 
 function addToList() {
@@ -40,6 +43,7 @@ function addToList() {
   /*clear text box*/
   document.getElementById('critterSelection').value = '';
 };
+
 
 function updateList() {
   var inProgress = "";
@@ -77,8 +81,9 @@ function updateList() {
   document.getElementById('completedList').innerHTML = completed;
 
   document.getElementById('critterSelection').focus();
-};
 
+  saveBugData();
+};
 
 function deleteData(i) {
   listData.splice(i, 1);
@@ -99,3 +104,23 @@ function increaseQuant(i) {
   listData[i]["quantity"]+=1;
   updateList();
 };
+
+//save listData to local storage
+function saveBugData() {
+  var str = JSON.stringify(listData);
+  localStorage.setItem("listData", str);
+}
+
+//get listData from local storage
+function retrieveBugData() {
+  var str = localStorage.getItem("listData");
+  listData = JSON.parse(str);
+  if(!listData) {
+    listData = [];
+  }
+}
+
+function clearBugData() {
+  listData = [];
+  updateList();
+}
