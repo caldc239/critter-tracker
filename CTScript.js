@@ -55,9 +55,9 @@ function updateList() {
     if(listData[i]["completed"] == 0){
       inProgress += "<tr>";
       inProgress += "<td>" + bugs_data[listData[i]["critterNo"] - 1]["name"] + "</td>";
-      inProgress += "<td><img src=\"images/icons/icon_arrow_down.png\" class=\"imgBtn\" onClick=\"decreaseQuant(" + i + ")\">" + listData[i]["quantity"] + "<img src=\"images/icons/icon_arrow_up.png\" class=\"imgBtn\" onClick=\"increaseQuant(" + i + ")\"></td>";
-      inProgress += "<td><img src=\"images/icons/icon_check.png\" class=\"imgBtn\" onclick=\"moveToCompleted(" + i + ")\"></td>";
-      inProgress += "<td><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + i + ")\" class=\"imgBtn\"></td>";
+      inProgress += "<td><center><img src=\"images/icons/icon_arrow_down.png\" class=\"imgBtn\" onClick=\"decreaseQuant(" + i + ")\">" + listData[i]["quantity"] + "<img src=\"images/icons/icon_arrow_up.png\" class=\"imgBtn\" onClick=\"increaseQuant(" + i + ")\"></center></td>";
+      inProgress += "<td><center><img src=\"images/icons/icon_check.png\" class=\"imgBtn\" onclick=\"moveToCompleted(" + i + ")\"></center></td>";
+      inProgress += "<td><center><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + i + ")\" class=\"imgBtn\"></center></td>";
       inProgress += "</tr>";
     }
   }
@@ -73,7 +73,7 @@ function updateList() {
     if(listData[k]["completed"] == 1){
       completed += "<tr>";
       completed += "<td>" + bugs_data[listData[k]["critterNo"] - 1]["name"] + "</td>";
-      completed += "<td><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + k + ")\" class=\"imgBtn\"></td>";
+      completed += "<td><center><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + k + ")\" class=\"imgBtn\"></center></td>";
       completed += "</tr>";
     }
   }

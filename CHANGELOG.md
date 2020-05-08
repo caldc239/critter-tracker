@@ -9,6 +9,11 @@ A place to document changes to the project
 - Multiple entries (1 completed, 1 in progress)
 - Move 1 instance to completed and leave remainder if quantity is higher than 3
 
+## [0.0.5] - 2020-05-08
+### Added
+- Background color to data entry & tables
+- Centered text in elements
+- Changed background color
 
 ## [0.0.4] - 2020-05-07
 ### Added
