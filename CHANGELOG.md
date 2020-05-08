@@ -2,13 +2,21 @@
 A place to document changes to the project
 
 ## [Unreleased]
-- Move creatures to "completed" list upon clicking the check mark
-- Add quantity and manipulators
 - Add photos to lists
 - Add values to lists
 - Add ability to sort lists
+- Fish!
+- Multiple entries (1 completed, 1 in progress)
+- Move 1 instance to completed and leave remainder if quantity is higher than 3
 
-## [0.0.3] - 2020-05-6
+
+## [0.0.4] - 2020-05-07
+### Added
+- Array of objects to store id, quantity, and completed in one place
+- local storage
+- reset button
+
+## [0.0.3] - 2020-05-06
 ### Added
 - This CHANGELOG file to document changes in versions
 - Array to hold quantities of critters
