@@ -54,7 +54,7 @@ function updateList() {
   for (i = 0; i < listData.length; ++i) {
     if(listData[i]["completed"] == 0){
       inProgress += "<tr>";
-      /*inProgress += "<td></td>"; INSERT PHOTO RETRIEVAL FUNCTION HERE*/
+      inProgress += "<td><img src=\""+ critters_image(listData[i]["critterNo"]) + "\" height=32></td>";
       inProgress += "<td>" + bugs_data[listData[i]["critterNo"] - 1]["name"] + "</td>";
       inProgress += "<td><center><img src=\"images/icons/icon_arrow_down.png\" class=\"imgBtn\" onClick=\"decreaseQuant(" + i + ")\">" + listData[i]["quantity"] + "<img src=\"images/icons/icon_arrow_up.png\" class=\"imgBtn\" onClick=\"increaseQuant(" + i + ")\"></center></td>";
       inProgress += "<td><center><img src=\"images/icons/icon_check.png\" class=\"imgBtn\" onclick=\"moveToCompleted(" + i + ")\"></center></td>";
@@ -73,7 +73,7 @@ function updateList() {
   for (k=0; k < listData.length; ++k) {
     if(listData[k]["completed"] == 1){
       completed += "<tr>";
-      /*completed += "<td></td>"; INSERT PHOTO RETRIEVAL FUNCTION HERE*/
+      completed += "<td><img src=\""+ critters_image(listData[k]["critterNo"]) + "\" height=32></td>";
       completed += "<td>" + bugs_data[listData[k]["critterNo"] - 1]["name"] + "</td>";
       completed += "<td><center><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + k + ")\" class=\"imgBtn\"></center></td>";
       completed += "</tr>";
