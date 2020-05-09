@@ -50,10 +50,11 @@ function updateList() {
   var i;
   inProgress += "<h2><center>Working List</center></h2>";
   inProgress += "<table>";
-  inProgress += "<tr><th>Critter</th><th>Quantity</th><th>Completed</th><th>Delete</th></tr>";
+  inProgress += "<tr><th></th><th>Critter</th><th>Quantity</th><th>Completed</th><th>Delete</th></tr>";
   for (i = 0; i < listData.length; ++i) {
     if(listData[i]["completed"] == 0){
       inProgress += "<tr>";
+      /*inProgress += "<td></td>"; INSERT PHOTO RETRIEVAL FUNCTION HERE*/
       inProgress += "<td>" + bugs_data[listData[i]["critterNo"] - 1]["name"] + "</td>";
       inProgress += "<td><center><img src=\"images/icons/icon_arrow_down.png\" class=\"imgBtn\" onClick=\"decreaseQuant(" + i + ")\">" + listData[i]["quantity"] + "<img src=\"images/icons/icon_arrow_up.png\" class=\"imgBtn\" onClick=\"increaseQuant(" + i + ")\"></center></td>";
       inProgress += "<td><center><img src=\"images/icons/icon_check.png\" class=\"imgBtn\" onclick=\"moveToCompleted(" + i + ")\"></center></td>";
@@ -68,10 +69,11 @@ function updateList() {
   var k;
   completed +="<h2><center>Completed List</center></h2>";
   completed += "<table>";
-  completed += "<tr><th>Critter</th><th>Delete</th></tr>";
+  completed += "<tr><th></th><th>Critter</th><th>Delete</th></tr>";
   for (k=0; k < listData.length; ++k) {
     if(listData[k]["completed"] == 1){
       completed += "<tr>";
+      /*completed += "<td></td>"; INSERT PHOTO RETRIEVAL FUNCTION HERE*/
       completed += "<td>" + bugs_data[listData[k]["critterNo"] - 1]["name"] + "</td>";
       completed += "<td><center><img src=\"images/icons/icon_delete.png\" onclick=\"deleteData(" + k + ")\" class=\"imgBtn\"></center></td>";
       completed += "</tr>";

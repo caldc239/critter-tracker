@@ -14,6 +14,7 @@ A place to document changes to the project
 - Background color to data entry & tables
 - Centered text in elements
 - Changed background color
+- Added support to grab photos
 
 ## [0.0.4] - 2020-05-07
 ### Added
