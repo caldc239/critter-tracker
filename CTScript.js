@@ -8,6 +8,7 @@ Date Last Modified: 4 May 2020
 File name: CTScripts.js */
 
 window.onload = function() {
+  //document.getElementById('testing').addEventListener("click", updatePopup);
   document.getElementById("addBtn").addEventListener("click", addToList);
   document.getElementById("critterSelection").addEventListener("keyup", function(e) {
     if (e.keyCode === 13) {
@@ -125,4 +126,11 @@ function retrieveBugData() {
 function clearBugData() {
   listData = [];
   updateList();
+}
+
+function updatePopup(e) {
+  console.log(e);
+  var popup = document.getElementById('popup');
+  popup.style.left = e.clientX + "px";
+  popup.style.top = e.clientY + "px";
 }

@@ -49,3 +49,12 @@ body {
 table {
   width: 100%;
 }
+
+#popup {
+  position: absolute;
+  background-color: #71B6F7;
+  color: #FFFFFF;
+  margin: 25px;
+  border-radius: 50px;
+  padding: 3px 25px 5px;
+}
