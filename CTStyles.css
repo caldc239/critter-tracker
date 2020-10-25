@@ -4,7 +4,7 @@ Date Created: 3 May 2020
 Date Last Modified: 4 May 2020
 File name: CTStyles.css*/
 body {
-  background-color: #A9D18E;
+  background-color: #BCF8CB;
   font-family: "Veranda", Geneva, sans-serif;
   color: #227538;
 }
@@ -15,9 +15,46 @@ body {
   margin: auto;
 }
 
-#description {}
-
-/*Add critter to list with this button*/
-#addBtn {
+/*all buttons in this class*/
+.imgBtn {
   height: 24px;
+}
+
+#data-entry {
+  background-color: #F5F7E9;
+  opacity: 0.8;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+#workingList {
+  background-color: #F5F7E9;
+  opacity: 0.8;
+  margin: 25px;
+  border-radius: 50px;
+  padding: 3px 25px 5px;
+}
+
+#completedList {
+  background-color: #F5F7E9;
+  opacity: 0.8;
+  margin: 25px;
+  border-radius: 50px;
+  padding: 3px 25px 5px;
+}
+
+table {
+  width: 100%;
+}
+
+#popup {
+  position: absolute;
+  background-color: #71B6F7;
+  color: #FFFFFF;
+  margin: 25px;
+  border-radius: 50px;
+  padding: 3px 25px 5px;
 }
