@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html>
-<!-- A page to track critters & collectibles
+  <!-- A page to track critters & collectibles
     in Animal Crossing: New Horizons
     Created by: Cassaundra Caldwell & Rey Orozco
     Date created: 3 May 2020
     Date last modified: 3 May 2020
     File name: index.html -->
 
-<head>
-  <meta charset="UTF-8">
-  <title>Critter Tracker</title>
-  <link href="CTStyles.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="critters.js"></script>
-  <script src="CTScript.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Critter Tracker</title>
+    <link href="CTStyles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!-- <script src="http://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
 
-<body>
-  <div id="main">
-    <center><img src="images/logo/CritterTrackerLogo1.png" height=200px /></center>
-    <!-- hex color #BCF8CB for background -->
+    <script src="critters.js"></script>
+    <script src="CTScript.js"></script>
+  </head>
 
-    <div id="description">
-      <p><b>
-          <center>Critter Tracker is a place to log the critters that you
-            would like collectibles of! Enter the name of the
-            critter you would like to make a collectible, add how many you have,
-            and mark it as completed once you receive the item.</center>
-        </b></p>
-    </div>
-    <!-- Area for script to autocomplete critter entry -->
-    <div id="data-entry">
-      <label for="critterSelection">Enter the critter you would like to collect: </label>
-      <input id="critterSelection">
+  <body>
+    <div id="main">
+      <center><img src="images/logo/CritterTrackerLogo1.png" height=200px /></center>
+      <!-- hex color #BCF8CB for background -->
 
-      <script>
-        $("#critterSelection").autocomplete({
-          source: bugs_names_only
-        });
-      </script>
-      <!-- plus button once critter is selected to add to list -->
-      <input type="image" id="addBtn" alt="Add" src="images/icons/icon_add.png" class="imgBtn" />
-    </div>
+      <div id="description">
+        <p><b>
+            <center>Critter Tracker is a place to log the critters that you
+              would like collectibles of! Enter the name of the
+              critter you would like to make a collectible, add how many you have,
+              and mark it as completed once you receive the item.</center>
+          </b></p>
+      </div>
+      <!-- Area for script to autocomplete critter entry -->
+      <div id="data-entry">
+        <label for="critterSelection">Enter the critter you would like to collect: </label>
+        <input id="critterSelection">
 
-    <div id="workingList">
-      <!--area for added critters, quantity manipulation, completed checkbox-->
-    </div>
+        <script>
+          $("#critterSelection").autocomplete({
+            source: bugs_names_only
+          });
+        </script>
+        <!-- plus button once critter is selected to add to list -->
+        <input type="image" id="addBtn" alt="Add" src="images/icons/icon_add.png" class="imgBtn" />
+      </div>
 
-    <div id="completedList">
-      <!--area for list of completed collectibles once checked off-->
-    </div>
+      <div id="workingList">
+        <!--area for added critters, quantity manipulation, completed checkbox-->
+      </div>
 
-    <!--<div id="testing" style="width: 250px; height: 250px; background-color: #00FF00;">
+      <div id="completedList">
+        <!--area for list of completed collectibles once checked off-->
+      </div>
+
+      <!--<div id="testing" style="width: 250px; height: 250px; background-color: #00FF00;">
     </div>-->
 
-  </div>
+    </div>
 
-  <!--<div id="popup">
+    <!--<div id="popup">
     <p>This is a popup!</p>
   </div>-->
 
-</body>
-<footer>
-  <br>
-  <p>
-    <center>Starting over? Click here to reset all your saved data.</center>
-  </p>
-  <center>
-    <p style="color:red;">WARNING: THIS CANNOT BE UNDONE</p>
-  </center>
-  <center><input type="button" id="reset" value="Reset all data" onclick="clearBugData()"></center>
-</footer>
+  </body>
+  <footer>
+    <br>
+    <p>
+      <center>Starting over? Click here to reset all your saved data.</center>
+    </p>
+    <center>
+      <p style="color:red;">WARNING: THIS CANNOT BE UNDONE</p>
+    </center>
+    <center><input type="button" id="reset" value="Reset all data" onclick="clearBugData()"></center>
+  </footer>
 
 </html>
